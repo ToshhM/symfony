@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+
+    <h1>Liste des produits</h1>
+    {% if produits is not empty %}
+        {{ dump(produits) }}
+    {% else %}
+        <p>Il n'y a aucun produit</p>
+    {% endif %}
+
+    <h2>Ajouter un produit</h2>
+
+    {{form(form_produit_new)}}
+        
+
+{% endblock %}
